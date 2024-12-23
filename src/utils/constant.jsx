@@ -1,0 +1,1 @@
+export const IMG_LOGO = 'https://static.vecteezy.com/system/resources/thumbnails/044/812/130/small_2x/stacked-fertilizer-bags-for-enhanced-plant-growth-isolated-on-transparent-background-png.png';
