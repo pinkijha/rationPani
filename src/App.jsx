@@ -1,12 +1,12 @@
 import React from 'react'
-import CategoryList from './components/CategoryList'
 import Header from './components/Header'
+import Category from './components/Category/Category'
 
 const App = () => {
   return (
     <div>
       <Header/>
-      <CategoryList/>
+      <Category/>
     </div>
   )
 }
