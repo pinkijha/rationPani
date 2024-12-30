@@ -4,7 +4,7 @@ import CategoryList from './CategoryList';
 
 const Category = () => {
   return (
-      <div className="flex flex-col m-4  md:mx-24 md:my-10">
+      <div className="flex flex-col m-4  md:mx-28 md:my-10">
       <div className="">
         <h1
           className="text-green-700 text-lg font-semibold
