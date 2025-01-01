@@ -8,9 +8,10 @@ const CategoryListMobile = () => {
         {categoriesList.map(({id, img, name}) => (
             <div key={id} className=' p-2 m-2  hover:scale-95 duration-300
             hover:bg-green-50 hover:rounded-3xl
-             flex flex-col items-center border space-y-1 w-28 h-36 border-gray-300 rounded-xl'>
+             flex flex-col items-center border space-y-2
+              w-28 h-36 border-gray-300 rounded-xl'>
             <img className='h-16 rounded-full' src={img} />
-            <p className='text-green-700 text-sm font-semibold w-20'>{name}</p>
+            <p className='text-green-700 text-sm font-semibold w-[90px]'>{name}</p>
             </div>
         ))}
       </div>
