@@ -1,3 +1,4 @@
+import CategoryListItems from "../components/category/CategoryListItems";
 import { BATHROOM, BAVERAGES, DAIRY_BAKERY, GRAINS, HOME_CARE, OILS, PERSONAL_CARE, SNACKS, SPICES, VEGITABLES_FRUITS } from "./constant";
 
 // Categories List
@@ -5,12 +6,12 @@ export const categoriesList = [
     {
         id: 1,
         name: 'Grains and Pulses',
-        img : GRAINS
+        img : GRAINS,
     },
     {
         id: 2,
         name: 'Oils and Fats',
-        img : OILS
+        img : OILS, 
     },
     {
         id: 3,
@@ -53,3 +54,17 @@ export const categoriesList = [
         img : BATHROOM
     },
 ]
+
+// Mock data for categories
+export const categoryData = {
+    1: ['Rice', 'Wheat', 'Pulses', 'Lentils', 'Barley'],
+    2: ['Cooking Oil', 'Ghee', 'Butter', 'Mustard Oil', 'Coconut Oil'],
+    3: ['Apples', 'Bananas', 'Carrots', 'Tomatoes', 'Potatoes'],
+    4: ['Chips', 'Biscuits', 'Popcorn', 'Chocolates', 'Noodles'],
+    5: ['Tea', 'Coffee', 'Juices', 'Soda', 'Energy Drinks'],
+    6: ['Milk', 'Cheese', 'Bread', 'Yogurt', 'Butter'],
+    7: ['Salt', 'Pepper', 'Chili Powder', 'Turmeric', 'Cinnamon'],
+    8: ['Dish Soap', 'Detergent', 'Glass Cleaner', 'Mop', 'Trash Bags'],
+    9: ['Soap', 'Shampoo', 'Toothpaste', 'Deodorant', 'Lotion'],
+    10: ['Toilet Paper', 'Towels', 'Toothbrush', 'Hairbrush', 'Soap'],
+  };
