@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { categoriesList } from "../../utils/categoriesListArrays";
 import CategoryListMobile from "../category/CategoryListMobile";
-import CategoryListItems from "../category/CategoryListItems";
 import { useContextApi } from "../../utils/Context";
+import MainContent from "../category/MainContent";
 
 const CategoryList = () => {
   const {selectedCategory, setSelectedCategory }= useContextApi();
@@ -34,18 +34,13 @@ const CategoryList = () => {
         </div>
         {/* Main Content */}
         <div className="flex-1 p-5">
-          {selectedCategory ? (
-            // Render CategoryListItems dynamically based on selected category
-            <CategoryListItems categoryId={selectedCategory} />
-          ) : (
-            <p>Select a category to view its content.</p>
-          )}
+          <MainContent/>
         </div>
       </div>
 
       {/* categoryList for mobile device */}
       <div className="flex md:hidden">
-        <CategoryListMobile />
+        {selectedCategory  ? <MainContent/> : <CategoryListMobile />}
       </div>
     </div>
   );
