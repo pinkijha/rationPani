@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { categoryData } from '../../utils/categoriesListArrays';
 
 
@@ -7,8 +7,12 @@ const CategoryListItems = ({ categoryId }) => {
   // Retrieve items for the selected category dynamically
   const items = categoryData[categoryId] || [];
 
+ 
+
+  
+
   return (
-    <div>
+    <div className=' space-y-3'>      
       <h2 className="text-xl font-bold">Items for Selected Category</h2>
       {items.length > 0 ? (
         <div className=" pl-5 mt-3">
