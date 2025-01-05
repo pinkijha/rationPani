@@ -1,26 +1,24 @@
-import React from 'react'
-import Header from './components/Header'
-import Category from './components/Category/Category'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { ContextProvider } from './utils/Context'
+import React from 'react';
+import Header from './components/Header';
+import Category from './components/Category/Category';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ContextProvider } from './utils/Context';
+import CartItems from './components/CartItems';
 
 const App = () => {
   return (
     <BrowserRouter>
-   <ContextProvider>
-   <div>
-      <Routes>
-      <Route path='/' element={
+      <ContextProvider>
         <div>
-          <Header/> 
-          <Category/>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Category />} />
+            <Route path="/cart" element={<CartItems />} />
+          </Routes>
         </div>
-      }/>      
-      </Routes>
-    </div>
-   </ContextProvider>
+      </ContextProvider>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
