@@ -11,15 +11,14 @@ const MainContent = () => {
   return (
     <div>
       {/* Main Content */}
-      <div className="md:flex-1   md:p-5">
+      <div className="md:flex-1 md:p-5">
           {selectedCategory ? (
             // Render CategoryListItems dynamically based on selected category
             <div>
               <button
             onClick={handleBack}
-            className="mb-4 px-3 py-1 bg-green-300 rounded-lg hover:scale-110 duration-200
-             text-sm"
-          >
+            className="md:hidden mb-4 px-3 py-1 bg-green-300 rounded-lg hover:scale-110 duration-200
+             text-sm" >
             Back
           </button>
             <CategoryListItems categoryId={selectedCategory} />

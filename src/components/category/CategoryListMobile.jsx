@@ -9,7 +9,7 @@ const CategoryListMobile = () => {
   
   return (
     <div>
-      <div className='flex flex-wrap justify-center cursor-pointer  '>
+      <div className={`${selectedCategory ? 'hidden' : 'flex flex-wrap justify-center cursor-pointer'} `}  >
       {categoriesList.map(({id, img, name}) => (
           <div key={id} onClick={()=>setSelectedCategory(id)}
           className={` p-2 m-2  hover:scale-95 duration-300
