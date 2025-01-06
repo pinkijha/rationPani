@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContextApi } from "../utils/Context";
 import { useNavigate } from "react-router-dom";
 
 const CartItems = () => {
   const { selectedItems, setSelectedItems } = useContextApi();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Load cart items from localStorage on mount
+    const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+    setSelectedItems(storedCartItems);
+  }, [setSelectedItems]);
+
+  useEffect(() => {
+    // Save cart items to localStorage whenever selectedItems change
+    localStorage.setItem('cartItems', JSON.stringify(selectedItems));
+  }, [selectedItems]);
 
   const handleDelete = (item) => {
     setSelectedItems((prevItems) => {
